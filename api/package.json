@@ -1,0 +1,18 @@
+{
+  "name": "usermanagementapi",
+  "version": "0.0.1",
+  "description": "API for User Management",
+  "scripts": {
+    "start": "sls offline start"
+  },
+  "author": "Sulay Sumaria",
+  "license": "MIT",
+  "dependencies": {
+    "joi": "^14.3.1",
+    "mongodb": "^3.2.3"
+  },
+  "devDependencies": {
+    "serverless": "^1.40.0",
+    "serverless-offline": "^4.9.4"
+  }
+}

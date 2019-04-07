@@ -1,0 +1,35 @@
+service: usermanagementapi
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ap-south-1
+  stage: dev
+  environment:
+    MONGODB_URL: ${file(./config.js):getEnvVars.${self:provider.stage}.MONGODB_URL}
+
+functions:
+  ping:
+    handler: handler.ping
+    events:
+      - http:
+          path: /
+          method: GET
+          cors: true
+  getUsers:
+    handler: handler.getUsers
+    events:
+      - http:
+          path: user
+          method: GET
+          cors: true
+  createUser:
+    handler: handler.createUser
+    events:
+      - http:
+          path: user
+          method: POST
+          cors: true
+
+plugins:
+  - serverless-offline

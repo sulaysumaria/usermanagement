@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "API for User Management",
   "scripts": {
-    "start": "sls offline start"
+    "start": "sls offline start",
+    "deploy": "sls deploy -v"
   },
   "author": "Sulay Sumaria",
   "license": "MIT",

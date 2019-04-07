@@ -25,6 +25,8 @@ $ npm run deploy
 | GET  | /user |           |
 | POST | /user | userModel |
 
+You can find postman collection in the repo
+
 ## Model
 
 ### userModel

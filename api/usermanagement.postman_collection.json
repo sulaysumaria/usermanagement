@@ -1,0 +1,70 @@
+{
+  "info": {
+    "_postman_id": "4764571d-9c4f-4322-87e0-7c437acaff33",
+    "name": "usermanagement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "https://k4kktncmmg.execute-api.ap-south-1.amazonaws.com/dev/",
+          "protocol": "https",
+          "host": ["k4kktncmmg", "execute-api", "ap-south-1", "amazonaws", "com"],
+          "path": ["dev", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add new User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"firstName\": \"Sulay\",\n\t\"lastName\": \"Sumaria\",\n\t\"email\": \"sulaysumaria@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "https://k4kktncmmg.execute-api.ap-south-1.amazonaws.com/dev/user",
+          "protocol": "https",
+          "host": ["k4kktncmmg", "execute-api", "ap-south-1", "amazonaws", "com"],
+          "path": ["dev", "user"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "https://k4kktncmmg.execute-api.ap-south-1.amazonaws.com/dev/user",
+          "protocol": "https",
+          "host": ["k4kktncmmg", "execute-api", "ap-south-1", "amazonaws", "com"],
+          "path": ["dev", "user"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -9,8 +9,8 @@ provider:
     MONGODB_URL: ${file(./config.js):getEnvVars.${self:provider.stage}.MONGODB_URL}
 
 functions:
-  ping:
-    handler: handler.ping
+  homePage:
+    handler: client.homePage
     events:
       - http:
           path: /

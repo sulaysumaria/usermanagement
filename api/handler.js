@@ -59,6 +59,10 @@ async function getUsers() {
           users,
           success: true,
         }),
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+          'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+        },
       });
     } catch (e) {
       console.log(e);
@@ -67,6 +71,10 @@ async function getUsers() {
         body: JSON.stringify({
           message: 'Some error occurred. Please try again later.',
         }),
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+          'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+        },
       });
     }
   });
@@ -93,6 +101,10 @@ async function createUser(event) {
           body: JSON.stringify({
             message: result.error.details.map((a) => a.message),
           }),
+          headers: {
+            'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+            'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+          },
         });
       }
 
@@ -114,6 +126,10 @@ async function createUser(event) {
         body: JSON.stringify({
           message: 'User created',
         }),
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+          'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+        },
       });
     } catch (e) {
       console.log(e);
@@ -122,6 +138,10 @@ async function createUser(event) {
         body: JSON.stringify({
           message: 'Some error occurred. Please try again later.',
         }),
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+          'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+        },
       });
     }
   });
